@@ -10,14 +10,14 @@ class UsersController < ApplicationController
         session.store(:user_id, user.id)
       redirect_to("/", { :notice => "Welcome back" + user.username})
       else
-        redirect_to("/user_sign_in", { :notice => "Nice try!})
+        redirect_to("/user_sign_in", { :notice => "Nice try!"})
       end
     end
   end
 
   def toast_cookies
     reset_session
-    redirect_to("/", {:notice => "See ya later!"})
+    redirect_to("/", { :notice => "See ya later!"})
   end
   def new_registration_form
 
